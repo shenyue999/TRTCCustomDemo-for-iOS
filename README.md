@@ -3,8 +3,10 @@
 ![platform](https://img.shields.io/badge/platform-ios-lightgrey.svg)  
 
 ![XlogDecoder](https://raw.githubusercontent.com/LiuKaoji/TRTCCustomDemo/master/screenshot.gif)
-### 说明
-* 
+
+
+### 说明 
+
 * **本项目只用于学习和交流，实时腾讯音视频TRTC采集与渲染接口使用Demo
 
 * **下载项目 若需要真实进房 需要在GenerateTestUserSig.h填写你的_SDKAppID与_SECRETKEY
