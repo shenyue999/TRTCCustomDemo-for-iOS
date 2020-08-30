@@ -1,0 +1,32 @@
+//
+//  TRTC-PrefixHeader.pch
+//  TRTCCustomDemo
+//
+//  Created by kaoji on 2020/8/22.
+//  Copyright © 2020 kaoji. All rights reserved.
+//
+
+#ifndef TRTC_PrefixHeader_pch
+#define TRTC_PrefixHeader_pch
+
+#import <TRTCCloudDef.h>
+#import <TRTCCloud.h>
+
+#define ROOM_ID 22338890
+
+#define USER_ID @"AAABBB"
+
+#define isIPhoneX_Xs ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1125, 2436), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isIPhoneXR ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(828, 1792), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isIPhoneXsMax ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(1242, 2688), [[UIScreen mainScreen] currentMode].size) : NO)
+#define isBangsDevice ((isIPhoneX_Xs || isIPhoneXR || isIPhoneXsMax) ? YES:NO)
+
+#define STATUS_BAR_HEIGHT ((isIPhoneX_Xs || isIPhoneXR || isIPhoneXsMax) ? 44.0 : 20.0)
+#define NAVIGATION_BAR_HEIGHT 44.0
+#define TOP_LAYOUT_GUIDE (STATUS_BAR_HEIGHT + NAVIGATION_BAR_HEIGHT)
+#define BOTTOM_LAYOUT_GUIDE (isBangsDevice ? 34.0 : 0.0)
+#define SAFE_HEIGHT (SCREEN_HEIGHT-TOP_LAYOUT_GUIDE-BOTTOM_LAYOUT_GUIDE)
+
+#define rgba(r,g,b,a) [UIColor colorWithRed:r/255.0f green:g/255.0f blue:b/255.0f alpha:a]
+
+#endif /* TRTC_PrefixHeader_pch */
